@@ -2,12 +2,14 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 
 import SimpleGrid from './examples/SimpleGrid'
+import TimerGrid from './examples/TimerGrid'
 
 const App = () => (
   <div>
-    <SimpleGrid size={16} />
-    <SimpleGrid size={20} />
-    <SimpleGrid size={32} />
+    <TimerGrid size={10} />
+    <TimerGrid size={16} />
+    <TimerGrid size={20} />
+    <TimerGrid size={32} />
   </div>
 )
 

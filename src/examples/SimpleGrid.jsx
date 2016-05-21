@@ -1,3 +1,5 @@
+// A simple state-full component to check React version of `pixelgrid`
+
 import React from 'react'
 
 import { generateGrid } from '../helpers/grid-helpers'
@@ -39,7 +41,7 @@ export default React.createClass({
           cells={this.state.cells}
           onCellEvent={this.updatePixel}
         />
-        <div style={{ margin: '1rem 0' }}>
+        <div style={{ margin: '0.5rem 0 1em' }}>
           <button type="button" onClick={this.reset}>RESET</button>
         </div>
       </div>

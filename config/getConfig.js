@@ -22,7 +22,8 @@ function getPlugins(env) {
   if (env === 'development') {
     plugins.push(new webpack.HotModuleReplacementPlugin());
     // tells the reloader to not reload if there is a syntax error in your code.
-    // The error is simply printed in the console, and the component will reload when you fix the error.)
+    // The error is simply printed in the console,
+    // and the component will reload when you fix the error.)
     plugins.push(new webpack.NoErrorsPlugin());
   }
   return plugins;
@@ -89,7 +90,11 @@ module.exports = function (env) {
       loaders: getLoaders(env)
     },
     resolve: {
-      extensions: ['', '.js', '.jsx']
+      extensions: ['', '.js', '.jsx'],
+      // alias: {
+      //   react: 'preact-compat',
+      //   'react-dom': 'preact-compat'
+      // }
     },
     // postcss() {
     //   return [autoprefixer];
