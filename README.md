@@ -24,3 +24,17 @@ The grid will trigger a `onCellEvent(id)` callback every time a cell is clicked 
 ```
 npm start
 ```
+
+## Production deploy
+
+Step 1: build the minified JavaScript file in `www/build/` folder
+
+```
+npm run build
+```
+
+Step 2: push `www` folder to surge.sh (a wondeful web static hosting service)
+
+```
+npm run deploy
+```

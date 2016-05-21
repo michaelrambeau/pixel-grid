@@ -4,7 +4,11 @@ import React from 'react'
 import SimpleGrid from './examples/SimpleGrid'
 
 const App = () => (
-  <SimpleGrid size={16} />
+  <div>
+    <SimpleGrid size={16} />
+    <SimpleGrid size={20} />
+    <SimpleGrid size={32} />
+  </div>
 )
 
 ReactDOM.render(

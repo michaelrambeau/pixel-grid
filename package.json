@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env NODE_ENV=development node config/devserver.js"
+    "start": "cross-env NODE_ENV=development node config/devserver.js",
+    "build": "webpack -p --config config/webpack.production.config.js --progress",
+    "deploy": "cd www && surge"
   },
   "repository": {
     "type": "git",

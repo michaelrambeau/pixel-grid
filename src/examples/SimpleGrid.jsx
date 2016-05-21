@@ -31,8 +31,10 @@ export default React.createClass({
     }))
   },
   render() {
+    const { size } = this.props
     return (
       <div>
+        <h3>Basic grid example ({size}*{size})</h3>
         <Grid
           cells={this.state.cells}
           onCellEvent={this.updatePixel}
