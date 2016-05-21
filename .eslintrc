@@ -18,6 +18,7 @@
     "dot-notation": 1,
     "react/prop-types": 0,
     "react/no-multi-comp": 0,
-    "no-else-return": 0
+    "no-else-return": 0,
+    "react/prefer-es6-class": 0
   }
 }

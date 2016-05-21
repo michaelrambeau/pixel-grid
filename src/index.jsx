@@ -1,9 +1,10 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import Grid from './core/pixel-grid-react/Grid'
+
+import SimpleGrid from './examples/SimpleGrid'
 
 const App = () => (
-  <Grid />
+  <SimpleGrid size={16} />
 )
 
 ReactDOM.render(

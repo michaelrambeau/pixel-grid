@@ -10,11 +10,14 @@ REQUIREMENT: it has to be fast!
 
 ## How to use it
 
-```
-<Grid cells={[]} onCellEvent={fn} />
+```js
+<Grid
+  cells={[]}
+  onCellEvent={fn}
+/>
 ```
 
-The grid will trigger a 'onCellEvent' callback every time a cell is clicked or dragged-and-dropped.
+The grid will trigger a `onCellEvent(id)` callback every time a cell is clicked or dragged-and-dropped.
 
 ## Development
 
