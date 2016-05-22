@@ -49,17 +49,16 @@ function getLoaders(env) {
 }
 
 function getEntry(env) {
+  const hot = [
+    `webpack-dev-server/client?http://localhost:${constants.port}`,
+    'webpack/hot/only-dev-server',
+    './src/index-react.jsx'
+  ]
+  const reactEntry = env === 'development' ? hot : './src/index-react.jsx'
   return {
-    app: env === 'development' ? (
-      [
-        `webpack-dev-server/client?http://localhost:${constants.port}`,
-        'webpack/hot/only-dev-server',
-        './src/index.jsx'
-      ]
-    ) : (
-      './src/index.jsx'
-    )
-  };
+    'react-app': reactEntry,
+    'preact-app': './src/index-preact.jsx'
+  }
 }
 
 function getOutput(env) {
@@ -104,4 +103,4 @@ module.exports = function (env) {
     config.devtool = 'eval';
   }
   return config;
-};
+}

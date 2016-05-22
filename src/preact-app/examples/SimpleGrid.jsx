@@ -1,21 +1,27 @@
-// A simple state-full component to check React version of `pixelgrid`
+// A simple state-full component to check preact version of `pixelgrid`
 
-import React from 'react'
+import { h, Component } from 'preact';
+/** @jsx h */
 
-import { generateGrid } from '../helpers/grid-helpers'
-import Grid from '../core/pixel-grid-react'
+import { generateGrid } from '../../helpers/grid-helpers'
+import Grid from '../core'
 
-export default React.createClass({
-  getInitialState() {
-    return {
+export default class SimpleGrid extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
       cells: generateGrid(this.props.size)
     }
-  },
+    const methods = ['updatePixel', 'reset']
+    methods.forEach(method => (
+      this[method] = this[method].bind(this)
+    ))
+  }
   reset() {
     this.setState({
       cells: generateGrid(this.props.size)
     })
-  },
+  }
   updatePixel(i) {
     // console.log('Update pixel', i);
     const state = this.state
@@ -31,7 +37,7 @@ export default React.createClass({
     this.setState(Object.assign({}, this.state, {
       cells
     }))
-  },
+  }
   render() {
     const { size } = this.props
     return (
@@ -45,7 +51,6 @@ export default React.createClass({
           <button type="button" onClick={this.reset}>RESET</button>
         </div>
       </div>
-    );
+    )
   }
-
-})
+}

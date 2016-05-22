@@ -1,21 +1,20 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 
-import SimpleGrid from './examples/SimpleGrid'
-import TimerGrid from './examples/TimerGrid'
+// import SimpleGrid from './examples/SimpleGrid'
+import TimerGrid from './react-app/examples/TimerGrid'
 
-const App = () => (
+const ReactApp = () => (
   <div>
-    <TimerGrid size={10} />
-    <TimerGrid size={16} />
+    <h2>React implementation</h2>
     <TimerGrid size={20} />
     <TimerGrid size={32} />
   </div>
 )
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('app')
+  <ReactApp />,
+  document.getElementById('react-app')
 )
 
 // Required to avoid `[HMR] The following modules couldn't be hot updated:` error

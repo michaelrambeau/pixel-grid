@@ -2,23 +2,35 @@
 
 import React from 'react'
 
-import { generateGrid } from '../helpers/grid-helpers'
-import Grid from '../core/pixel-grid-react'
+import { generateGrid } from '../../helpers/grid-helpers'
+import Grid from '../core'
 
-export default React.createClass({
-  getInitialState() {
-    return {
+export default class SimpleGrid extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
       cells: generateGrid(this.props.size),
       duration: 0
     }
-  },
+    const methods = [
+      'updatePixel',
+      'updateRandomPixel',
+      'startTimer',
+      'updateDuration',
+      'reset'
+    ]
+    methods.forEach(method => (
+      this[method] = this[method].bind(this)
+    ))
+  }
   reset() {
     this.setState({
       cells: generateGrid(this.props.size),
       duration: 0
     })
-  },
+  }
   updatePixel(i) {
+    // console.log('Update pixel', i);
     const state = this.state
     const color = 'rgb(51, 255, 0)'
     const updatedCell = Object.assign({}, state.cells[i], {
@@ -32,17 +44,17 @@ export default React.createClass({
     this.setState(Object.assign({}, this.state, {
       cells
     }))
-  },
+  }
   updateDuration(duration) {
     this.setState({
       duration,
       cells: this.state.cells
     })
-  },
+  }
   updateRandomPixel() {
     const length = this.state.cells.length
     this.updatePixel(Math.floor(Math.random() * length))
-  },
+  }
   startTimer() {
     const length = this.state.cells.length
     const t0 = performance.now()
@@ -65,7 +77,7 @@ export default React.createClass({
       }, 0)
     }
     tick()
-  },
+  }
   render() {
     const { size } = this.props
     const { duration } = this.state
@@ -86,7 +98,6 @@ export default React.createClass({
           )}
         </div>
       </div>
-    );
+    )
   }
-
-})
+}

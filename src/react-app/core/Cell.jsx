@@ -1,8 +1,9 @@
 import React from 'react'
-export default React.createClass({
+
+export default class Cell extends React.Component {
   shouldComponentUpdate(nextProps) {
     return nextProps.cell.color !== this.props.cell.color
-  },
+  }
   render() {
     const { id, cell: { color, width }, onMouseDown, onMouseUp, onMouseOver } = this.props;
     const styles = {
@@ -21,4 +22,4 @@ export default React.createClass({
       />
     )
   }
-})
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>pixel-grid</title>
+    <meta name="description" content="pixel-grid, a React component to draw pixels on a grid">
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    body{
+      background-color: #555;
+      color: white;
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+    .grid-container{
+      display: flex;
+      flex-wrap: wrap;
+      cursor: pointer;
+    }
+    .grid-container > div{
+      border: 1px solid #585858;
+      border-width: 0 1px 1px 0;
+      color: white;
+    }
+    .container{
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    button{
+      background-color: transparent;
+      border: 2px solid rgb(51, 255, 0);
+      border-radius: .4rem;
+      color: rgb(51, 255, 0);
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1rem;
+      padding: 0.2rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+      margin-right: 1em;
+    }
+    .grid{
+      display: flex;
+      margin: -1rem 0 0 -1rem;
+    }
+    .grid > div{
+      flex: 1;
+      padding: 1rem 0 0 1rem;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>pixel-grid: React VS Preact</h1>
+      <div class="grid">
+        <div id="react-app">Loading...</div>
+        <div id="preact-app"></div>
+      </div>
+    </div>
+    <script src="build/bundle-react-app.js"></script>
+    <script src="build/bundle-preact-app.js"></script>
+  </body>
+</html>
