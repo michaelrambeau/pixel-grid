@@ -1,12 +1,11 @@
-// A simple state-full component to check preact version of `pixelgrid`
+// A simple state-full component to check React version of `pixelgrid`
 
-import { h, Component } from 'preact';
-/** @jsx h */
+import React from 'react'
 
 import { generateGrid } from '../../helpers/grid-helpers'
-import Grid from '../core'
+import Grid from '../../../packages/pixel-grid-react'
 
-export default class SimpleGrid extends Component {
+export default class SimpleGrid extends React.Component {
   constructor(props) {
     super(props)
     this.state = {

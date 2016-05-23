@@ -34,7 +34,7 @@ function getLoaders(env) {
   const jsLoader = {
     test: /\.jsx?$/,
     exclude: /node_modules/,
-    loaders: env === 'development' ? ['react-hot', 'babel'] : ['babel']
+    loaders: env === 'developmentA' ? ['react-hot', 'babel'] : ['babel']
   };
 
   const cssLoader = {

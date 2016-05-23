@@ -1,7 +1,7 @@
 import { h, render } from 'preact'
 /** @jsx h */
 
-import Grid from './preact-app/examples/TimerGrid'
+import Grid from './preact-grid/examples/TimerGrid'
 
 const App = () => (
   <div>

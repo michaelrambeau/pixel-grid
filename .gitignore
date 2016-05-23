@@ -3,6 +3,7 @@
 
 # Build
 www/build/
+packages/*/build
 
 # Logs
 logs

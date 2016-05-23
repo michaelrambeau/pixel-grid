@@ -2,7 +2,7 @@ import { h, Component } from 'preact';
 /** @jsx h */
 
 import { generateGrid } from '../../helpers/grid-helpers'
-import Grid from '../core'
+import Grid from '../../../packages/pixel-grid-preact'
 
 export default class SimpleGrid extends Component {
   constructor(props) {
@@ -58,7 +58,7 @@ export default class SimpleGrid extends Component {
     const length = this.state.cells.length
     const t0 = performance.now()
     this.reset()
-    console.log('Start timer!');
+    // console.log('Start timer!')
     const self = this
     let n = 0
     const tick = () => {
@@ -70,7 +70,7 @@ export default class SimpleGrid extends Component {
         } else {
           const t1 = performance.now()
           const duration = (t1 - t0) / 1000
-          console.log('The end!', duration.toFixed(1), 'seconds')
+          // console.log('The end!', duration.toFixed(1), 'seconds')
           self.updateDuration(duration)
         }
       }, 0)
@@ -82,7 +82,7 @@ export default class SimpleGrid extends Component {
     const { duration } = this.state
     return (
       <div>
-        <h3>Timer ({size}*{size})</h3>
+        <h3>{size}*{size}</h3>
         <Grid
           cells={this.state.cells}
           onCellEvent={this.updatePixel}

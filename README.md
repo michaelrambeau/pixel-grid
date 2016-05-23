@@ -2,9 +2,15 @@
 
 GOAL: Create a dumb component that renders a grid of pixels.
 
-The grid can render any array of cells and triggers events when the user interacts with the grid by either:
+This is a component made for [pixel-art-react](https://github.com/jvalen/pixel-art-react) project by Javier Valencia.
+
+The grid renders any array of cells and triggers events when the user interacts with the grid by either:
 * clicking on a cell
 * doing drag-and-drop on the grid
+
+See the module pages for more details:
+* React implementation: [pixel-grid-react](packages/pixel-grid-react) module
+* Preact implementation: coming soon!
 
 REQUIREMENT: it has to be fast!
 

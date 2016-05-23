@@ -1,8 +1,7 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 
-// import SimpleGrid from './examples/SimpleGrid'
-import TimerGrid from './react-app/examples/TimerGrid'
+import TimerGrid from './react-grid/examples/TimerGrid'
 
 const ReactApp = () => (
   <div>
