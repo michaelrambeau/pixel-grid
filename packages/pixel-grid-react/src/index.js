@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import Grid from './Grid'
 
-export default class GridContainer extends React.Component {
+export default class GridContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {

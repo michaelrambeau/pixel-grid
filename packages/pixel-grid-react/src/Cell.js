@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default class Cell extends React.Component {
+export default class Cell extends Component {
   shouldComponentUpdate(nextProps) {
     return nextProps.cell.color !== this.props.cell.color
   }

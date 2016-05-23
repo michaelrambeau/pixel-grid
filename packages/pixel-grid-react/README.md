@@ -2,11 +2,10 @@
 
 This is the React version of [pixel-grid](https://github.com/michaelrambeau/pixel-grid).
 
- This is a very basic React dumb component to display a grid of pixels.
 
 Concept: you pass an array of cells and the component renders it, listening to mouse events (clicks and drag and drops).
 
-The component has been optimized to avoid un-necessary renderings.
+The component has been optimized to avoid unnecessary renderings.
 
 This component has been created for [pixel-art-react](https://github.com/jvalen/pixel-art-react), a project by Javier Valencia.
 
