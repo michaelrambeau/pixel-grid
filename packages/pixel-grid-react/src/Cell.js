@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 
 export default class Cell extends Component {
   shouldComponentUpdate(nextProps) {
-    return nextProps.cell.color !== this.props.cell.color
+    const keys = ['color', 'width']
+    const isSame = keys.every(key => this.props.cell[key] === nextProps.cell[key])
+    return !isSame
   }
   render() {
     const { id, cell: { color, width }, onMouseDown, onMouseUp, onMouseOver } = this.props;
@@ -11,7 +13,6 @@ export default class Cell extends Component {
       paddingBottom: `${width}%`,
       backgroundColor: `${color}`
     };
-    // console.log('Render cell');
     return (
       <div
         className="grid-cell"
