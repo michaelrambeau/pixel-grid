@@ -11,7 +11,10 @@ const config = {
   dest: `${path}/build/bundle.js`,
   format: 'cjs',
   plugins: [
-    babel(),
+    babel({
+      babelrc: false,
+      presets: ['es2015-rollup', 'react']
+    }),
     // npm({
     //   jsnext: true,
     //   main: true
