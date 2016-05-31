@@ -17,6 +17,21 @@ npm install pixel-grid-react
 
 ### How to use it
 
+Include the CSS code:
+
+```css
+.grid-container{
+  cursor: pointer;
+}
+.grid-container > div{
+  border: 1px solid #585858;
+  border-width: 0 1px 1px 0;
+  float: left;
+}
+```
+
+Include the JS code (ES6 syntax, to be used with Webpack bundler for example)
+
 ```js
 import Grid from 'pixel-grid-react'
 ```
@@ -46,25 +61,3 @@ import Grid from 'pixel-grid-react'
 ```
 
 The grid will trigger a `onCellEvent(id)` callback every time a cell is clicked or dragged-and-dropped.
-
-### CSS
-
-The following piece of code is required to display th grid correctly using a flex layout.
-
-```
-.grid-container{
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  cursor: pointer;
-}
-.grid-container > div{
-  border: 1px solid #585858;
-  border-width: 0 1px 1px 0;
-  color: white;
-}
-```

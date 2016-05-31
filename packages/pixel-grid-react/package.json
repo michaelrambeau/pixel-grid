@@ -1,6 +1,6 @@
 {
   "name": "pixel-grid-react",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "React dumb component to render a grid of pixels",
   "repository": "https://github.com/michaelrambeau/pixel-grid/packages/pixel-grid-react",
   "main": "build/bundle.js",
