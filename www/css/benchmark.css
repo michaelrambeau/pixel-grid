@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  background-color: #555;
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+button{
+  background-color: transparent;
+  border: 2px solid rgb(51, 255, 0);
+  border-radius: .4rem;
+  color: rgb(51, 255, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-right: 1em;
+}
+.layout-row{
+  display: flex;
+  margin: -1rem 0 0 -1rem;
+}
+.layout-row > div{
+  flex: 1;
+  padding: 1rem 0 0 1rem;
+}

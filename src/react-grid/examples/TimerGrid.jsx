@@ -3,7 +3,8 @@
 import React from 'react'
 
 import { generateGrid } from '../../helpers/grid-helpers'
-import Grid from '../../../packages/pixel-grid-react'
+import { timer } from '../../helpers/benchmark-helpers'
+import Grid from '../../../packages/pixel-grid-react/index.js'
 
 export default class SimpleGrid extends React.Component {
   constructor(props) {
@@ -57,7 +58,7 @@ export default class SimpleGrid extends React.Component {
   }
   startTimer() {
     const length = this.state.cells.length
-    const t0 = performance.now()
+    const t0 = timer()
     this.reset()
     // console.log('Start timer!')
     const self = this
@@ -69,7 +70,7 @@ export default class SimpleGrid extends React.Component {
         if (n < length) {
           tick()
         } else {
-          const t1 = performance.now()
+          const t1 = timer()
           const duration = (t1 - t0) / 1000
           // console.log('The end!', duration.toFixed(1), 'seconds')
           self.updateDuration(duration)

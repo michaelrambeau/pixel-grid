@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { getCellStyles } from '../../../src/helpers/grid-helpers'
+
 export default class Cell extends Component {
   shouldComponentUpdate(nextProps) {
     const keys = ['color', 'width']
@@ -8,14 +10,9 @@ export default class Cell extends Component {
   }
   render() {
     const { id, cell: { color, width }, onMouseDown, onMouseUp, onMouseOver } = this.props;
-    const styles = {
-      flex: `0 0 ${width}%`,
-      paddingBottom: `${width}%`,
-      backgroundColor: `${color}`
-    };
+    const styles = getCellStyles(width, color, false)
     return (
       <div
-        className="grid-cell"
         onMouseDown={() => onMouseDown(id)}
         onMouseUp={() => onMouseUp(id)}
         onMouseOver={() => onMouseOver(id)}

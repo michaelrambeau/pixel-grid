@@ -6,6 +6,7 @@ import TimerGrid from './react-grid/examples/TimerGrid'
 const ReactApp = () => (
   <div>
     <h2>React implementation</h2>
+    <TimerGrid size={10} />
     <TimerGrid size={20} />
     <TimerGrid size={32} />
   </div>
